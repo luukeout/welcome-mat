@@ -18,10 +18,8 @@ var StartView = Backbone.View.extend({
 	},
 
 	changeView: function(){
-		$('.start-box').html('');
-		new SelectView()
-
-
+		
+		router.navigate("price", {trigger: true});
 	},
 
 });
@@ -29,6 +27,10 @@ var StartView = Backbone.View.extend({
 var SelectView = Backbone.View.extend({
 
 	template: _.template($('.select-box-template').text()),
+
+	events: {
+		"click .styled-select" : "changeView",
+	},
 
 	initialize: function() {
 		$('.start-box').append(this.el)
@@ -39,4 +41,17 @@ var SelectView = Backbone.View.extend({
 		this.$el.html(this.template())
 	},
 
+	changeView: function(){
+		
+		router.navigate("game", {trigger: true});
+	},
+
 });
+
+
+
+
+
+
+
+

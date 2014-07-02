@@ -9,11 +9,22 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 
-
 	startScreen: function() {
+		$('.tile-container').hide();
 		$('.start-box').html('');
 		new StartView();
+	},
 
+	priceScreen: function() {
+		$('.start-box').html('');
+		new SelectView();
+	},
+
+	gameScreen: function() {
+		$('.start-box').hide();
+		$('.tile-container').html('');
+		new TilesView();
+		$('.tile-container').show();
 	},
 
 

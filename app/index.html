@@ -32,9 +32,10 @@
 
         <div class="overlay"></div>
 
-        <!-- <div class="tileContainer">
+        <div class="tile-container">
+        </div>
                 
-            <div class="picBox">
+            <!-- <div class="picBox">
                 <img src= "http://passioncarcollection.com/wp-content/uploads/2012/02/placeholder-car.png">
             </div>
 
@@ -62,23 +63,51 @@
         <div class="tileContainer">
             <div class="picBox">
                 <img src= "http://passioncarcollection.com/wp-content/uploads/2012/02/placeholder-car.png">
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
-        <div class="start-button"></div> -->
+        
         <script text="text/template" class="start-box-template">
+            
             <div class="start-button">
                 <img src="images/go-home.png">
             </div>
+
         </script>
 
         <script text="text/template" class="select-box-template">
-            <select>
-                <option>Choose a Home Value</option>
-                <option>$75,000 - $100,000</option>
-                <option>$100,000 - $150,000</option>
-                <option>$150,000 - $200,000</option>
-            </select>
+                
+            <div class="styled-select">    
+                <select>
+                    <option>Choose a Home Value</option>
+                    <option>$75,000 - $100,000</option>
+                    <option>$100,000 - $150,000</option>
+                    <option>$150,000 - $200,000</option>
+                </select>
+            </div>    
+
+        </script>
+
+        <script text="text/template" class="tiles-view-template">
+
+            <div class="pic-box">
+                <img src= "http://passioncarcollection.com/wp-content/uploads/2012/02/placeholder-car.png">
+            </div>
+
+            <div class="icon-box">
+                <img src="bed-darker.png">
+            </div>
+
+            <div class="icon-box">
+                <img src="bath-two.png">
+                <img src="bath-two-half.png">
+            </div>
+
+            <div class="house-box">
+                <img src="house.png">
+                <div class="sqft">1200 sqft</div>
+            </div>
+
         </script>    
 
         <!-- build:js scripts/vendor.js -->
