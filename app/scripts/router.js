@@ -13,11 +13,14 @@ var AppRouter = Backbone.Router.extend({
 		$('.tile-container').hide();
 		$('.start-box').html('');
 		new StartView();
+		$('.start-box').show();
 	},
 
 	priceScreen: function() {
+		$('.tile-container').hide();
 		$('.start-box').html('');
 		new SelectView();
+		$('.start-box').show();
 	},
 
 	gameScreen: function() {
