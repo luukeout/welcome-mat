@@ -2,25 +2,22 @@
 // endbower
 
 body {
+    // position: fixed;
+    // z-index: 1;
     margin: 0;
     padding: 0;
     background-image: url('http://cdn.freshome.com/wp-content/uploads/2013/08/selling-your-home-cedar-shingle-home.jpg');
     background-size: cover;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    // color: #333;
 }
 
-// .startBox {
-//     margin: 445px auto 0 auto;
-//     width: 300px;
-//     font-size: 18px;
-//     font-weight: 200;
-//     line-height: 30px;
-//     background-color: #AFC2CC;
-//     border-radius: 6px;
-//     box-shadow: 0px 40px 162px 40px #0e1512;
-//     padding: 60px;
-    
+// .overlay {
+//     position: relative;
+//     z-index: 2;
+//     background: rgba(75, 102, 111, 0.87);
+//     width: 100%;
+//     height: 800px;
 // }
 
 .browsehappy {
@@ -30,32 +27,90 @@ body {
     padding: 0.2em 0;
 }
 
+
+////////////////////////////////////////////////
+///// Start Screen
+///////////////////////////////////////////////
+
+
+.start-box {
+    position: relative;
+    // z-index: 4;
+    margin: 285px auto 0 auto;
+    width: 500px;
+    height: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: rgba(189, 222, 240, 1);
+    border-radius: 6px;
+    box-shadow: 0px 40px 162px 40px #0e1512;
+    // padding: 60px;
+    
+}
+
+.start-button {
+    position: absolute;
+    bottom: 30px;
+    margin: auto;
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+
+}
+
+
 ////////////////////////////////////////
 ///// House Tiles
 ///////////////////////////////////////
 
-.tileContainer {
-    display: inline-block;
-    width: 28%;
-    height: 750px;
-    margin: 2% 2.25% 0% 2.5%;
-    background-color: rgba(189, 222, 240, 0.66);
-    border-radius: 6px;
-    // box-shadow: 0px 40px 88px 15px #0e1512;
-}
+// .tileContainer {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 28%;
+//     height: 750px;
+//     margin: 2% 2.25% 4% 2.5%;
+//     background-color: rgba(189, 222, 240, 0.66);
+//     border-radius: 6px;
+//     cursor: pointer;
+//     // box-shadow: 10px 10px 8px -4px #91b4c1;
+//         &:hover {
+//             background-color: rgba(189, 222, 240, 1);
+//         }
+// }
 
-.picBox {
-    display: inline-block;
-    padding: 21px 21px;
-    width: 360px;
-    height: 270px;
-    // border-radius: 6px;
-        img {
-            width: 360px;
-            height: 270px;
-            border-radius: 6px;
-        }
-}
+
+
+// .picBox {
+//     display: inline-block;
+//     padding: 21px 21px;
+//     width: 360px;
+//     height: 270px;
+//     // border-radius: 6px;
+//         img {
+//             width: 360px;
+//             height: 270px;
+//             border-radius: 6px;
+//         }
+// }
+
+// .iconBox {
+//     margin: 30px auto;
+//     width: 90%;
+//     border-bottom: 2px solid #6c6c6c;
+// }
+
+// .houseBox {
+//     margin: 30px auto;
+//     width: 90%;
+// }
+
+// .sqft {
+//     display: inline-block;
+
+// }
+
+
 
 
 

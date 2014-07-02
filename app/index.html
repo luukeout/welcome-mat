@@ -26,15 +26,34 @@
         <![endif]-->
 
 
-        <div class="startBox">
-          
+        <div class="start-box">
+                <!-- <div class="start-button"></div> -->
         </div>
 
-        <div class="tileContainer">
+        <div class="overlay"></div>
+
+        <!-- <div class="tileContainer">
+                
             <div class="picBox">
                 <img src= "http://passioncarcollection.com/wp-content/uploads/2012/02/placeholder-car.png">
             </div>
+
+            <div class="iconBox">
+                <img src="bed-darker.png">
+            </div>
+
+            <div class="iconBox">
+                <img src="bath-two.png">
+                <img src="bath-two-half.png">
+            </div>
+
+            <div class="houseBox">
+                <img src="house.png">
+                <div class="sqft">1200 sqft</div>
+            </div>
+        
         </div>
+        
         <div class="tileContainer">
             <div class="picBox">
                 <img src= "http://passioncarcollection.com/wp-content/uploads/2012/02/placeholder-car.png">
@@ -46,10 +65,27 @@
             </div>
         </div>
 
+        <div class="start-button"></div> -->
+        <script text="text/template" class="start-box-template">
+            <div class="start-button">
+                <img src="images/go-home.png">
+            </div>
+        </script>
+
+        <script text="text/template" class="select-box-template">
+            <select>
+                <option>Choose a Home Value</option>
+                <option>$75,000 - $100,000</option>
+                <option>$100,000 - $150,000</option>
+                <option>$150,000 - $200,000</option>
+            </select>
+        </script>    
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -64,6 +100,10 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/model.js"></script>
+        <script src="scripts/choices-view.js"></script>
+        <script src="scripts/tiles-view.js"></script>
+        <script src="scripts/router.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
