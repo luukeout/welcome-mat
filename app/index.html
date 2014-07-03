@@ -13,6 +13,8 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,700,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -66,28 +68,43 @@
             </div> -->
         <!-- </div> -->
 
-        
+<!-- /////////////////////// -->
+<!-- Start Box Template -->
+<!-- ///////////////////// -->
         <script text="text/template" class="start-box-template">
             
-            <div class="start-button">
+            <div class="welcome">
+                <div>Welcome!</div>
+                <div>Click the house to begin.</div>
+            </div>
+
+            <div class="start button">
                 <img src="images/go-home.png">
             </div>
 
         </script>
-
+<!-- //////////////////////// -->
+<!-- Select Box Template -->
+<!-- /////////////////////// -->
         <script text="text/template" class="select-box-template">
                 
             <div class="styled-select">    
-                <select>
-                    <option>Choose a Home Value</option>
-                    <option>$75,000 - $100,000</option>
-                    <option>$100,000 - $150,000</option>
-                    <option>$150,000 - $200,000</option>
+                <select id="price">
+                    <option value='0'>Choose a Home Value</option>
+                    <option value='75'>$75 K - $100 K</option>
+                    <option value='100'>$100 K - $150 K</option>
+                    <option value='150'>$150 K - $200 K</option>
                 </select>
+            </div>
+
+            <div class="button">
+                <p>GO!</p>
             </div>    
 
         </script>
-
+<!-- /////////////////////// -->
+<!-- Tile View Template -->
+<!-- ////////////////////// -->
         <script text="text/template" class="tiles-view-template">
 
             <div class="pic-box">

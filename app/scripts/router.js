@@ -8,7 +8,6 @@ var AppRouter = Backbone.Router.extend({
 		"game"  : "gameScreen",
 	},
 
-
 	startScreen: function() {
 		$('.tile-container').hide();
 		$('.start-box').html('');
@@ -32,6 +31,8 @@ var AppRouter = Backbone.Router.extend({
 
 
 });
+
+
 
 var router = new AppRouter();
 Backbone.history.start();
