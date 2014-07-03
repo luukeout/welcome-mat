@@ -51,9 +51,8 @@ var SelectView = Backbone.View.extend({
 	},
 
 	changeView: function(){
-		$('#price') === '0' ? alert('Please choose a home value') : router.navigate("game", {trigger: true});
-			
-		
+		console.log($('#price').val())
+		$('#price').val() === '0' ? alert('Please Choose a Home Value.') : router.navigate("game", {trigger: true});		
 	},
 
 });

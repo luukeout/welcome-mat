@@ -1,6 +1,7 @@
 "use strict";
-
-// Model Constructor
+/////////////////////////////////////////////
+///// Model Constructor
+///////////////////////////////////////////
 var Properties = Backbone.Model.extend({
 	defaults: {
 		zpid:  "",
@@ -9,12 +10,13 @@ var Properties = Backbone.Model.extend({
 		beds:  "",
 		baths: "",
 		sqft:  "",
-	}
+	},
 
 });
 
-
-// Collection Constructor
+///////////////////////////////////////////////////////
+///// Collection Constructor
+/////////////////////////////////////////////////////
 var PropertiesCollection = Backbone.Collection.extend({
 
 	model: Properties,
