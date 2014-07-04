@@ -38,7 +38,7 @@ var SelectView = Backbone.View.extend({
 	template: _.template($('.select-box-template').text()),
 
 	events: {
-		"click .button" : "changeView",
+		"click .button" : "getArray",
 	},
 
 	initialize: function() {
@@ -50,9 +50,27 @@ var SelectView = Backbone.View.extend({
 		this.$el.html(this.template());
 	},
 
-	changeView: function(){
-		console.log($('#price').val())
-		$('#price').val() === '0' ? alert('Please Choose a Home Value.') : router.navigate("game", {trigger: true});		
+	getArray: function(){
+
+		// $('#price').val() === '0' ? alert('Please Choose a Home Value.') : router.navigate("game", {trigger: true});
+		if ($('#price').val() === '0') {
+			alert('Please Choose a Home Value.')
+			} else  
+				 if ($('#price').val() === '100') {
+					window.shuffledList = _.shuffle(oneHundred)
+						getHouse(oneHundred)
+				} else 
+					 if ($('#price').val() === '150') {
+						window.shuffledList = _.shuffle(oneFifty)
+							getHouse(oneFifty)
+					} else 
+						 if ($('#price').val() === '200') {
+							window.shuffledList = _.shuffle(twoHundred)
+								getHouse(twoHundred)
+					}
+			
+		router.navigate("game", {trigger: true})
+
 	},
 
 });

@@ -1,0 +1,112 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'colors:', '^0.6.2,' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.26
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json welcome-mat@0.0.0 No description
+6 warn package.json welcome-mat@0.0.0 No repository field.
+7 warn package.json welcome-mat@0.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'colors:', null ]
+10 verbose cache add name=undefined spec="colors:" args=["colors:",null]
+11 verbose parsed url { protocol: 'colors:',
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: '',
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: '',
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: null,
+11 verbose parsed url   path: null,
+11 verbose parsed url   href: 'colors:' }
+12 verbose cache add [ '^0.6.2,', null ]
+13 verbose cache add name=undefined spec="^0.6.2," args=["^0.6.2,",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: '^0.6.2,',
+14 verbose parsed url   path: '^0.6.2,',
+14 verbose parsed url   href: '^0.6.2,' }
+15 silly lockFile 5dc3fded-colors colors:
+16 verbose lock colors: /Users/lukeolson/.npm/5dc3fded-colors.lock
+17 silly lockFile 31885fc1-0-6-2 ^0.6.2,
+18 verbose lock ^0.6.2, /Users/lukeolson/.npm/31885fc1-0-6-2.lock
+19 silly lockFile 5dc3fded-colors colors:
+20 silly lockFile 5dc3fded-colors colors:
+21 silly lockFile 31885fc1-0-6-2 ^0.6.2,
+22 silly lockFile 31885fc1-0-6-2 ^0.6.2,
+23 verbose addNamed [ 'colors:', '' ]
+24 verbose addNamed [ null, '*' ]
+25 silly lockFile 4f03e707-colors colors:@
+26 verbose lock colors:@ /Users/lukeolson/.npm/4f03e707-colors.lock
+27 verbose addNamed [ '^0.6.2,', '' ]
+28 verbose addNamed [ null, '*' ]
+29 silly lockFile 421eae22-0-6-2 ^0.6.2,@
+30 verbose lock ^0.6.2,@ /Users/lukeolson/.npm/421eae22-0-6-2.lock
+31 silly addNameRange { name: 'colors:', range: '*', hasData: false }
+32 silly addNameRange { name: '^0.6.2,', range: '*', hasData: false }
+33 verbose url raw colors:
+34 verbose url resolving [ 'https://registry.npmjs.org/', './colors%3A' ]
+35 verbose url resolved https://registry.npmjs.org/colors%3A
+36 info trying registry request attempt 1 at 15:09:47
+37 http GET https://registry.npmjs.org/colors%3A
+38 verbose url raw ^0.6.2,
+39 verbose url resolving [ 'https://registry.npmjs.org/', './%5E0.6.2%2C' ]
+40 verbose url resolved https://registry.npmjs.org/%5E0.6.2%2C
+41 info trying registry request attempt 1 at 15:09:47
+42 http GET https://registry.npmjs.org/%5E0.6.2%2C
+43 http 404 https://registry.npmjs.org/%5E0.6.2%2C
+44 verbose headers { date: 'Thu, 03 Jul 2014 19:09:48 GMT',
+44 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+44 verbose headers   'content-type': 'application/json',
+44 verbose headers   'cache-control': 'max-age=0',
+44 verbose headers   'content-length': '52',
+44 verbose headers   'accept-ranges': 'bytes',
+44 verbose headers   via: '1.1 varnish',
+44 verbose headers   age: '0',
+44 verbose headers   'x-served-by': 'cache-ord1722-ORD',
+44 verbose headers   'x-cache': 'MISS',
+44 verbose headers   'x-cache-hits': '0',
+44 verbose headers   'x-timer': 'S1404414588.026789,VS0,VE66',
+44 verbose headers   'keep-alive': 'timeout=10, max=50',
+44 verbose headers   connection: 'Keep-Alive' }
+45 silly registry.get cb [ 404,
+45 silly registry.get   { date: 'Thu, 03 Jul 2014 19:09:48 GMT',
+45 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+45 silly registry.get     'content-type': 'application/json',
+45 silly registry.get     'cache-control': 'max-age=0',
+45 silly registry.get     'content-length': '52',
+45 silly registry.get     'accept-ranges': 'bytes',
+45 silly registry.get     via: '1.1 varnish',
+45 silly registry.get     age: '0',
+45 silly registry.get     'x-served-by': 'cache-ord1722-ORD',
+45 silly registry.get     'x-cache': 'MISS',
+45 silly registry.get     'x-cache-hits': '0',
+45 silly registry.get     'x-timer': 'S1404414588.026789,VS0,VE66',
+45 silly registry.get     'keep-alive': 'timeout=10, max=50',
+45 silly registry.get     connection: 'Keep-Alive' } ]
+46 silly lockFile 421eae22-0-6-2 ^0.6.2,@
+47 silly lockFile 421eae22-0-6-2 ^0.6.2,@
+48 error 404 404 Not Found: %5E0.6.2%2C
+48 error 404
+48 error 404 '%5E0.6.2%2C' is not in the npm registry.
+48 error 404 You should bug the author to publish it
+48 error 404 It was specified as a dependency of 'welcome-mat'
+48 error 404
+48 error 404 Note that you can also install from a
+48 error 404 tarball, folder, or http url, or git url.
+49 error System Darwin 13.3.0
+50 error command "node" "/usr/local/bin/npm" "install" "colors:" "^0.6.2,"
+51 error cwd /Users/lukeolson/Projects/welcome-mat
+52 error node -v v0.10.26
+53 error npm -v 1.4.9
+54 error code E404
+55 verbose exit [ 1, true ]
