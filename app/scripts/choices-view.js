@@ -51,8 +51,6 @@ var SelectView = Backbone.View.extend({
 	},
 
 	getArray: function(){
-
-		// $('#price').val() === '0' ? alert('Please Choose a Home Value.') : router.navigate("game", {trigger: true});
 		if ($('#price').val() === '0') {
 			alert('Please Choose a Home Value.')
 			} else  
@@ -67,10 +65,7 @@ var SelectView = Backbone.View.extend({
 						 if ($('#price').val() === '200') {
 							window.shuffledList = _.shuffle(twoHundred)
 								getHouse(twoHundred)
-					}
-			
-		router.navigate("game", {trigger: true})
-
+					}		
 	},
 
 });

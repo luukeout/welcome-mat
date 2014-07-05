@@ -24,6 +24,9 @@ var AppRouter = Backbone.Router.extend({
 
 	gameScreen: function() {
 		// I think I do the API calls here using the houseList array from my select view
+			window.houseList.forEach(function(){
+			apiCall()
+		})
 		$('.start-box').hide();
 		$('.tile-container').html('');
 		new TilesView();

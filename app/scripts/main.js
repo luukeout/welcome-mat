@@ -1,3 +1,6 @@
+
+
+
 // // 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=705+Pineapple+Pointe&citystatezip=Greenville%2C+SC'
 
 // // 705 Pineapple Pointe, Greenville, SC
@@ -27,7 +30,6 @@ var houseList = [];
 
 function getHouse (arrayName) {
 	if (shuffledList.length<=2) {
-		// console.log("repopulating")
 		shuffledList = _.shuffle(arrayName);
 	}
 
@@ -35,6 +37,25 @@ function getHouse (arrayName) {
 		houseList[i] = shuffledList.pop()
 		console.log(houseList)
 	}
+
+	router.navigate("game", {trigger: true})
+}
+
+function parseXml(xml){
+  //find every Tutorial and print the author
+  $(xml).find("url").text();
+
+  // $(".tile-container").append($(this)
+
+}
+
+function apiCall(zpid) {
+	$.ajax({
+    type: "GET",
+    url: "http://0.0.0.0:3000/api/property/" + zpid,
+    dataType: "xml",
+    success: parseXml
+	})
 }
 
 
