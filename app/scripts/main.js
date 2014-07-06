@@ -43,9 +43,14 @@ function getHouse (arrayName) {
 
 function parseXml(xml){
   //find every Tutorial and print the author
-  $(xml).find("url").text();
+  console.log($(xml).find("url").text())
+  console.log($(xml).find("price").text())
+  console.log($(xml).find("bedrooms").text())
+  console.log($(xml).find("bathrooms").text())
+  console.log($(xml).find("finishedSqFt").text())
+  console.log($(xml).find("lotSizeSqFt").text())
 
-  // $(".tile-container").append($(this)
+  // $(".tile-container").append($(this))
 
 }
 
@@ -57,6 +62,10 @@ function apiCall(zpid) {
     success: parseXml
 	})
 }
+
+// window.houseList.forEach(function(property){
+// 	apiCall(property);
+// }
 
 
 

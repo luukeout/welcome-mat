@@ -19,3 +19,5 @@ var TilesView = Backbone.View.extend({
 	},
 
 });
+
+// var renderedTemplate = this.template(this.model.attributes)
