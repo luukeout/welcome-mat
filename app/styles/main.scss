@@ -27,6 +27,15 @@ body {
     padding: 0.2em 0;
 }
 
+.game-header {
+    margin: 0 auto;
+    width: 960px;
+    height: 95px;
+    background-color: rgba(189, 222, 240, 1);
+    border-radius: 6px;
+
+}
+
 
 ////////////////////////////////////////////////
 ///// Start Screen
@@ -94,7 +103,7 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 28%;
-    height: 750px;
+    height: 655px;
     margin: 2% 2.25% 2% 2.5%;
     background-color: rgba(189, 222, 240, 0.66);
     border-radius: 6px;

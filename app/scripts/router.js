@@ -9,6 +9,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	startScreen: function() {
+		$('.game-header').hide();
 		$('.tile-container').hide();
 		$('.start-box').html('');
 		new StartView();
@@ -16,6 +17,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	priceScreen: function() {
+		$('.game-header').hide();
 		$('.tile-container').hide();
 		$('.start-box').html('');
 		new SelectView();
@@ -23,13 +25,13 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	gameScreen: function() {
-		// I think I do the API calls here using the houseList array from my select view
-			window.houseList.forEach(function(property){
-			apiCall(property)
-		})
+		// 	window.houseList.forEach(function(property){
+		// 	apiCall(property)
+		// })
 		$('.start-box').hide();
 		$('.tile-container').html('');
 		new TilesView();
+		$('.game-header').show();
 		$('.tile-container').show();
 	},
 

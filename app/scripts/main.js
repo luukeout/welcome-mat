@@ -28,18 +28,18 @@ var twoHundred  = [89804034, 96458822, 71251078, 11025731, 11014874, 11001058, 1
 // shuffledList = _.shuffle('')
 var houseList = [];
 
-function getHouse (arrayName) {
-	if (shuffledList.length<=2) {
-		shuffledList = _.shuffle(arrayName);
-	}
+// function getHouse (arrayName) {
+// 	if (shuffledList.length<=2) {
+// 		shuffledList = _.shuffle(arrayName);
+// 	}
 
-	for (var i=0; i < 3; i++) {
-		houseList[i] = shuffledList.pop()
-		console.log(houseList)
-	}
+// 	for (var i=0; i < 3; i++) {
+// 		houseList[i] = shuffledList.pop()
+// 		console.log(houseList)
+// 	}
 
-	router.navigate("game", {trigger: true})
-}
+// 	router.navigate("game", {trigger: true})
+// }
 
 function parseXml(xml){
   //find every Tutorial and print the author
