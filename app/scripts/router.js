@@ -25,18 +25,30 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	gameScreen: function() {
-		// 	window.houseList.forEach(function(property){
-		// 	apiCall(property)
-		// })
+		window.houseList.forEach(function(property){
+			apiCall(property)
+		})
 		$('.start-box').hide();
 		$('.tile-container').html('');
-		new TilesView();
-		$('.game-header').show();
-		$('.tile-container').show();
+		// new TilesView();
+		// $('.game-header').show();
+		($('.game-header').is( ":hidden" )) ? $('.game-header').slideDown("slow") : $('.game-header').hide();
+		($('.tile-container').is( ":hidden" )) ? $('.tile-container').slideDown("slow") : $('.tile-container').hide();
+		// $('.tile-container').show();
 	},
 
 
 });
+
+// $( document.body ).click(function () {
+//   if ( $( "div:first" ).is( ":hidden" ) ) {
+//     $( "div" ).slideDown( "slow" );
+//   } else {
+//     $( "div" ).hide();
+//   }
+// });
+
+// ($('.game-header').is( ":hidden" )) ? $('.game-header').slideDown("slow") : $('.game-header').hide();
 
 
 

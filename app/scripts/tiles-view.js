@@ -7,6 +7,8 @@
 
 var TilesView = Backbone.View.extend({
 
+	className: 'property-box',
+
 	template: _.template($('.tiles-view-template').text()),
 
 	initialize: function() {
@@ -15,7 +17,7 @@ var TilesView = Backbone.View.extend({
 	},
 
 	render: function() {
-		this.$el.html(this.template());
+		this.$el.append(this.template({model: this.model}));
 	},
 
 });

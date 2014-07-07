@@ -30,7 +30,10 @@
 <!-- ///////////////////////////////////////////// -->
 <!-- ///////////Divs -->
 <!-- /////////////////////////////////////////// -->
-        <div class="game-header"></div>
+        <div class="game-header">
+            <div class="question">Can You Guess Which House Is:</div>
+            <div class="price-box"></div>
+        </div>
 
         <div class="start-box"></div>
 
@@ -72,12 +75,18 @@
 
         </script>
 <!-- ////////////////////////////////////////////////////////// -->
+<!-- Game-Header Template -->
+<!-- ///////////////////////////////////////////////////////// -->
+        <script text="text/template" class="tiles-view-template">
+        <div class="match-price">$<%= this.model.price %></div>
+        </script>
+<!-- ////////////////////////////////////////////////////////// -->
 <!-- Tile View Template -->
 <!-- ///////////////////////////////////////////////////////// -->
         <script text="text/template" class="tiles-view-template">
 
             <div class="pic-box">
-                <img src="http://www.threedogstl.com/wp-content/uploads/2013/12/dog-in-snow.jpg">
+                <img src=<%= this.model.pic %>>
             </div>
 
             <div class="icon-box">
@@ -94,7 +103,12 @@
 
             <div class="house-box">
                 <img src="house.png">
-                <div class="sqft">1200 sqft</div>
+                <div class="sqft"><%= this.model.sqft %> Square Feet</div>
+            </div>
+
+            <div class="lot-box">
+                <img src="fence.png">
+                <div class="sqft"><%= this.model.lotSize %> Lot Size sq.ft.</div>
             </div>
 
         </script>
@@ -129,3 +143,4 @@
         <!-- endbuild -->
 </body>
 </html>
+<!-- http://www.threedogstl.com/wp-content/uploads/2013/12/dog-in-snow.jpg -->

@@ -2,15 +2,17 @@
 /////////////////////////////////////////////
 ///// Model Constructor
 ///////////////////////////////////////////
-var Properties = Backbone.Model.extend({
+var Property = Backbone.Model.extend({
 	defaults: {
-		zpid:  "",
-		image: "url",
-		price: "",
-		beds:  "",
-		baths: "",
-		sqft:  "",
+		zpid        :  "",
+		pic         :  "",
+		price       :  "",
+		bedrooms    :  "",
+		bathrooms   :  "",
+		sqft        :  "",
+		lotSize     :  "",
 	},
+
 
 });
 
@@ -19,6 +21,6 @@ var Properties = Backbone.Model.extend({
 /////////////////////////////////////////////////////
 var PropertiesCollection = Backbone.Collection.extend({
 
-	model: Properties,
-	url: 'http://www.zillow.com/webservice/GetUpdatedPropertyDetails.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&zpid='
+	model: Property,
+	url: ''
 });
