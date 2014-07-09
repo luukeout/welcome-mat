@@ -3,12 +3,15 @@
 //////////////////////////////////////////////////////////
 ////// TilesView Constructor
 ////////////////////////////////////////////////////////
-
 var TilesView = Backbone.View.extend({
 
 	className: 'property-box',
 
 	template: _.template($('.tiles-view-template').text()),
+
+	events: {
+		"click": "matching",
+	},
 
 	initialize: function() {
 		$('.tile-container').append(this.el);
@@ -19,12 +22,20 @@ var TilesView = Backbone.View.extend({
 		this.$el.append(this.template({model: this.model}));
 	},
 
+	matching: function() {
+		if (this.model == randomHome.attributes) {
+			this.$el.css('background', 'rgb(26, 248, 150)')
+			// alert('holy shit you won')
+			console.log(this.model)
+	}
+
+	},
+
 });
 
 //////////////////////////////////////////////////////////
 ////// GamePrice Constructor
 ////////////////////////////////////////////////////////
-
 var GamePrice = Backbone.View.extend({
 
 	className: 'match-price',

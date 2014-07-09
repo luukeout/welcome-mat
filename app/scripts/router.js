@@ -27,11 +27,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	gameScreen: function() {
-		// window.matchPrice =[]
 		window.housePrices=[]
-  		// var matchedPrice = shuffledPrice.pop()
-  		// console.log(matchedPrice)
-
 		window.houseList.forEach(function(property){
 			apiCall(property)
 		})
@@ -41,7 +37,6 @@ var AppRouter = Backbone.Router.extend({
 		// 	apiCall(value);
 		// })
 
-
 		$('.start-box').hide();
 		$('.tile-container').html('');
 		// new GamePrice({model: home.attributes});
@@ -50,19 +45,9 @@ var AppRouter = Backbone.Router.extend({
 		($('.tile-container').is( ":hidden" )) ? $('.tile-container').slideDown("slow") : $('.tile-container').hide();
 		// $('.tile-container').show();
 	},
-
-
 });
 
-// $( document.body ).click(function () {
-//   if ( $( "div:first" ).is( ":hidden" ) ) {
-//     $( "div" ).slideDown( "slow" );
-//   } else {
-//     $( "div" ).hide();
-//   }
-// });
 
-// ($('.game-header').is( ":hidden" )) ? $('.game-header').slideDown("slow") : $('.game-header').hide();
 
 
 

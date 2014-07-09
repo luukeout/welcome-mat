@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////
 ///// StartView Constructor
 ///////////////////////////////////////////////////////
-
 var StartView = Backbone.View.extend({
 
 	template: _.template($(".start-box-template").text()),
@@ -31,8 +30,6 @@ var StartView = Backbone.View.extend({
 //////////////////////////////////////////////////////////
 ///// SelectView Constructor
 /////////////////////////////////////////////////////////
-
-
 var SelectView = Backbone.View.extend({
 
 	template: _.template($('.select-box-template').text()),
@@ -66,9 +63,7 @@ var SelectView = Backbone.View.extend({
 							window.shuffledList = _.shuffle(twoHundred)
 								getHouse(twoHundred)
 					}
-
 	},
-
 });
 
 
