@@ -4,7 +4,6 @@
 ////// TilesView Constructor
 ////////////////////////////////////////////////////////
 
-
 var TilesView = Backbone.View.extend({
 
 	className: 'property-box',
@@ -22,6 +21,10 @@ var TilesView = Backbone.View.extend({
 
 });
 
+//////////////////////////////////////////////////////////
+////// GamePrice Constructor
+////////////////////////////////////////////////////////
+
 var GamePrice = Backbone.View.extend({
 
 	className: 'match-price',
@@ -34,7 +37,8 @@ var GamePrice = Backbone.View.extend({
 	},
 
 	render: function() {
-		this.$el.append(this.template({model: this.model}));
+		// console.log(this.model)
+		this.$el.html(this.template(this.model.attributes));
 	},
 });
 
