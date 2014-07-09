@@ -43,17 +43,14 @@ function getHouse (arrayName) {
 
 function parseXml(xml){
   var zpid      = $(xml).find("zpid").text()
-  var pic       = $(xml).find("photoGallery").text()
+  var pic       =   $(xml).find("url").first().text()
   var price     = $(xml).find("price").text()
   var bedrooms  = $(xml).find("bedrooms").text()
   var bathrooms = $(xml).find("bathrooms").text()
   var sqft      = $(xml).find("finishedSqFt").text()
   var lotSize   = $(xml).find("lotSizeSqFt").text()
-  // $(".tile-container").append($(this))
-  console.log(zpid, price, bedrooms, bathrooms, sqft, lotSize)
-
-  var pics = [];
-
+  
+  
   var home = new Property({
   	zpid: zpid,
   	pic: pic, 
@@ -64,9 +61,22 @@ function parseXml(xml){
   	lotSize: lotSize,
   })
 
-  var view = new TilesView({model: home.attributes})
+  // home.price.forEach(function(price) {
+  // 	priceArray = priceArray.concat(price)
 
-  console.log(view)
+  // })
+
+  	var view = new TilesView({model: home.attributes})
+  	var price = new GamePrice({model: home.attributes})
+	
+
+  	housePrices.push(home.attributes.price)
+  	console.log(housePrices)
+
+  	_.shuffle(housePrices)
+
+  	
+  
 }
 
 

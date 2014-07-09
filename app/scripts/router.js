@@ -25,12 +25,14 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	gameScreen: function() {
+		window.housePrices=[]
 		window.houseList.forEach(function(property){
 			apiCall(property)
+
 		})
 		$('.start-box').hide();
 		$('.tile-container').html('');
-		// new TilesView();
+		// new GamePrice({model: home.attributes});
 		// $('.game-header').show();
 		($('.game-header').is( ":hidden" )) ? $('.game-header').slideDown("slow") : $('.game-header').hide();
 		($('.tile-container').is( ":hidden" )) ? $('.tile-container').slideDown("slow") : $('.tile-container').hide();
