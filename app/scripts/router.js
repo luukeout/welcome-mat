@@ -29,21 +29,11 @@ var AppRouter = Backbone.Router.extend({
 	gameScreen: function() {
 		window.housePrices=[]
 		window.houseList.forEach(function(property){
-			apiCall(property)
+			$.when(apiCall(property)).done(($('.game-header, .tile-container').is( ":hidden" )) ? $('.game-header, .tile-container').slideDown('slow') : $('.game-header, .tile-container').hide())
 		})
-
-		// $.each(window.houseList, function(index, value){
-		// 	console.log(index, value)
-		// 	apiCall(value);
-		// })
 
 		$('.start-box').hide();
 		$('.tile-container').html('');
-		// new GamePrice({model: home.attributes});
-		// $('.game-header').show();
-		($('.game-header').is( ":hidden" )) ? $('.game-header').slideDown("slow") : $('.game-header').hide();
-		($('.tile-container').is( ":hidden" )) ? $('.tile-container').slideDown("slow") : $('.tile-container').hide();
-		// $('.tile-container').show();
 	},
 });
 

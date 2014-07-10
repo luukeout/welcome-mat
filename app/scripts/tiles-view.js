@@ -17,9 +17,8 @@ var TilesView = Backbone.View.extend({
 		$('.tile-container').append(this.el);
 		this.render();
 		$('.home-price').hide()
+		$('.play-again').hide()
 		$('.sorry').hide()
-		// $('.tile-container').hide()
-		// ($('.tile-container').is( ":hidden" )) ? $('.tile-container').slideDown("slow") : $('.tile-container').hide();
 	},
 
 	render: function() {
@@ -30,6 +29,12 @@ var TilesView = Backbone.View.extend({
 		if (this.model == randomHome.attributes) {
 			this.$el.css('background', 'rgb(26, 248, 150)')
 			$('.home-price').show()
+			this.$('.sorry').replaceWith('You Got It!')
+			this.$('.play-again').show()
+			$('.play-again').click(function(){
+				router.navigate("price", {trigger: true})
+				location.reload()
+				})
 			}
 			
 			else 
@@ -37,14 +42,16 @@ var TilesView = Backbone.View.extend({
 					this.$el.css('background', 'rgb(250, 15, 81)')
 					this.$('.home-price').hide()
 					this.$('.sorry').show()
+					this.$('.play-again').hide()
 				}
 
-				else
-					if (this.model == randomHome.attributes) {
-					this.$el.css('background', 'rgb(26, 248, 150)')
-					$('.sorry').hide()
-					$('.home-price').show()
-				}
+				// else
+				// 	if (this.model == randomHome.attributes) {
+				// 	this.$el.css('background', 'rgb(26, 248, 150)')
+				// 	$('.home-price').show()
+				// 	// $('.sorry').show()
+				// 	$('.sorry').replaceWith('You Got It!').show()
+				// }
 	},
 
 });

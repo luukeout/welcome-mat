@@ -46,18 +46,25 @@ function getHouse (arrayName) {
 	router.navigate("game", {trigger: true})
 }
 
+
+
 //////////////////////////////////////////////////////////
 ////// Parse XML Function
 ////////////////////////////////////////////////////////
 function parseXml(xml){
   var zpid      = $(xml).find("zpid").text()
-  var pic       = $(xml).find("url").first().text()
+  var pic       = $(xml).find("url").first().text() 
   var price     = $(xml).find("price").text()
   var bedrooms  = $(xml).find("bedrooms").text()
   var bathrooms = $(xml).find("bathrooms").text()
   var sqft      = $(xml).find("finishedSqFt").text()
   var lotSize   = $(xml).find("lotSizeSqFt").text()
-  
+
+  // Add Commas to Numbers
+  var price   = numeral(price).format('0,0')
+  var sqft    = numeral(sqft).format('0,0')
+  var lotSize = numeral(lotSize).format('0,0')
+
   // Add API Data To A Collection As An Object
   var home = properties.add({
   	zpid:      zpid,
@@ -77,6 +84,8 @@ function parseXml(xml){
   var view  = new TilesView({model: home.attributes})
 }
 
+
+
 //////////////////////////////////////////////////////////
 ////// API Call
 ////////////////////////////////////////////////////////
@@ -89,9 +98,7 @@ function apiCall(zpid) {
 	})
 }
 
-// window.houseList.forEach(function(property){
-// 	apiCall(property);
-// }
+
 
 
 
