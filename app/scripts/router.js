@@ -30,6 +30,7 @@ var AppRouter = Backbone.Router.extend({
 		window.housePrices=[]
 		window.houseList.forEach(function(property){
 			$.when(apiCall(property)).done(($('.game-header, .tile-container').is( ":hidden" )) ? $('.game-header, .tile-container').slideDown('slow') : $('.game-header, .tile-container').hide())
+				
 		})
 
 		$('.start-box').hide();

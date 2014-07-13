@@ -8,6 +8,7 @@ var TilesView = Backbone.View.extend({
 	className: 'property-box',
 
 	template: _.template($('.tiles-view-template').text()),
+	// bedTemplate: _.template($('.bed-Template').text()),
 
 	events: {
 		"click": "matching",

@@ -38,8 +38,6 @@
 
         <div class="start-box"></div>
 
-        <div class="overlay"></div>
-
         <div class="tile-container"></div>
 <!-- ////////////////////////////////////////////// -->
 <!-- Start Box Template -->
@@ -47,12 +45,13 @@
         <script type="text/template" class="start-box-template">
             
             <div class="welcome">
-                <div>Welcome!</div>
-                <div>Click the house to begin.</div>
+                <div>Welcome<br> to<br> House Guesst!</div>
+                
             </div>
 
-            <div class="start button">
+            <div class="button">
                 <img src="images/go-home.png">
+                <div class="begin">Begin!</div>
             </div>
 
         </script>
@@ -61,14 +60,13 @@
 <!-- ////////////////////////////////////////////////// -->
         <script type="text/template" class="select-box-template">
                 
-            <div class="styled-select">    
-                <select id="price">
-                    <option value='0'>Choose a Home Value</option>
-                    <option value='100'>$100 K - $150 K</option>
-                    <option value='150'>$150 K - $200 K</option>
-                    <option value='200'>$200 K - $300 K</option>
-                </select>
-            </div>
+            
+
+            <div class="welcome">Choose a Price Range.</div>
+
+            <div class="button"><div class="amount">$100 K - $150 K</div></div>
+            <div class="button"><div class="amount">$150 K - $200 K</div></div>
+            <div class="button"><div class="amount">$200 K - $300 K</div></div>
 
             <div class="button">
                 <p>GO!</p>
@@ -101,10 +99,7 @@
             <div class="play-again">play again</div>
 
             <div class="icon-box">
-                <img src="bed-darker.png">
-                <img src="bed-darker.png">
-                <img src="bed-darker.png">
-                <img src="bed-darker.png">
+                <img src=<%= this.model.bedrooms %>>
             </div>
 
             <div class="icon-box">
@@ -123,6 +118,21 @@
             </div>
 
         </script>
+
+        <!--  -->
+
+         <!-- <div class="styled-select">    
+                 <select id="price">
+                    <option value='0'>Choose a Home Value</option>
+                    <option value='100'>$100 K - $150 K</option>
+                    <option value='150'>$150 K - $200 K</option>
+                    <option value='200'>$200 K - $300 K</option>
+                </select>
+            </div> -->
+
+        <section hidden>
+            <img src="bed-darker.png">
+        </section>
 <!-- ////////////////////////////////////////////////////////// -->
 <!-- End Template -->
 <!-- ///////////////////////////////////////////////////////// -->    

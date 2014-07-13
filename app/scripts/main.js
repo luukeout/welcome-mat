@@ -1,9 +1,9 @@
 
 
 
-// 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=800+Pendleton+St&citystatezip=Greenville%2C+SC'
+// 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=105+Devonshire+Ln&citystatezip=Greenville%2C+SC'
 
-// 800 Pendleton St, Greenville, SC
+// 105 Devonshire Ln, Greenville, SC
 
 
 //////////////////////////////////////////////////////////
@@ -65,6 +65,14 @@ function parseXml(xml){
   var sqft    = numeral(sqft).format('0,0')
   var lotSize = numeral(lotSize).format('0,0')
 
+//   bedrooms = Number_of_bedrooms_returned_from_api;
+// var imgOutput = [];
+// for(var ii=num;num>0;num--){ 
+//   imageOutput = imageOutput + 1;
+// } 
+// return imageOutput;
+  var imgSource = 'http://s14.postimg.org/i8n30zta5/bed_darker.png'
+
   // Add API Data To A Collection As An Object
   var home = properties.add({
   	zpid:      zpid,
@@ -75,6 +83,26 @@ function parseXml(xml){
   	sqft:      sqft,
   	lotSize:   lotSize,
   });
+  var imageOutput = []
+  function convert(num){
+  	for(var ii=num; num>0; num--){ 
+	  imageOutput.push(num)
+	} 
+  }
+
+//   convert(bedrooms)
+// console.log(imageOutput)
+//   function beds(){
+//   	imageOutput.map(function(''){
+//   		num = ''
+  		
+  	
+  	
+//   	})
+//   }
+  
+  var bedrooms = beds(imgSource)
+console.log(bedrooms)
 
   // Push Prices Into An Empty Array
   window.housePrices.push(home.attributes.price)
