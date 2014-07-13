@@ -6,7 +6,10 @@ body {
     // z-index: 1;
     margin: 0;
     padding: 0;
-    background-image: url('http://cdn.freshome.com/wp-content/uploads/2013/08/selling-your-home-cedar-shingle-home.jpg');
+    background-image: url('http://www.thehomespun.com/wp-content/uploads/2012/08/one-side-of-house-early-august-1024x657.jpg');
+    // background-image: url('http://2.bp.blogspot.com/-ZziIeSCjOzs/UJaMZ1goYRI/AAAAAAAADOc/qA7ajYA2Ahw/s1600/wood-shake+siding+1.jpg');
+    // background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2012/03/weathered-shake-shingles-texture.jpg');
+    // background-image: url('http://cdn.freshome.com/wp-content/uploads/2013/08/selling-your-home-cedar-shingle-home.jpg');
     background-size: cover;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     // line-height: 1.4;
@@ -25,7 +28,7 @@ body {
     width: 960px;
     height: 95px;
     background-color: #0183CA;
-    border-radius: 6px;
+    border-radius: 0px 0px 6px 6px;
 }
 
 .question {
@@ -87,6 +90,12 @@ body {
     border-radius: 6px;
     background-color: #008cd8;
     box-shadow: inset 0px 9px 34px 0px rgba(221, 217, 217, 1);        
+        img {
+            display: inline-block;
+            margin: 3px 0px 3px 53px;
+            width: 30px;
+            height: 30px;
+        }
 }
 
 .button:hover {
@@ -95,12 +104,6 @@ body {
     // box-shadow: inset 0px 0px 77px 0px #ddd9d9;
 }
 
-img {
-    display: inline-block;
-    margin: 3px 0px 3px 53px;
-    width: 30px;
-    height: 30px;
-}
 
 .begin {
     display: inline-block;
@@ -144,12 +147,13 @@ img {
 ///////////////////////////////////////
 
 .property-box {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 28%;
     height: 655px;
     margin: 2% 2.25% 2% 2.5%;
-    background-color: rgba(189, 222, 240, 0.66);
+    background-color: rgba(189, 222, 240, 0.8);
     border-radius: 6px;
     font-family: 'Kaushan Script', cursive;
     font-size: 1.5em;
@@ -161,32 +165,64 @@ img {
         }
 }
 
+.got-it {
+    position: absolute;
+    top: 21px;
+    z-index: 3;
+    width: 360px;
+    height: 40px;
+    background-color: rgba(210,208,219, 0.73);
+    border-radius: 6px 6px 0px 0px;
+}
+
 .pic-box {
+    position: relative;
+    z-index: 1;
     display: inline-block;
-    padding: 21px 21px;
+    padding: 21px 21px 0px 21px;
     width: 360px;
     height: 270px;
     // border-radius: 6px;
         img {
+            display: block;
+            position: relative;
+            z-index: 2;
             width: 360px;
             height: 270px;
             border-radius: 6px;
         }
 }
 
+.home-price  {
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    width: 360px;
+    height: 40px;
+    background-color: rgba(210,208,219, 0.73);
+    border-radius: 0px 0px 6px 6px;
+}
+
+.sorry {
+    height: 35px;
+}
+
 .icon-box {
-    margin: 30px auto;
+    display: inline-block;
+    margin: 0px auto 30px;
     width: 90%;
     border-bottom: 2px solid #6c6c6c;
 
 }
 
-.house-box {
-    margin: 30px auto 0px;
-    width: 90%;
-}
+// .house-box {
+//     margin: 30px auto 0px;
+//     width: 90%;
+// }
 
 .lot-box {
+    position: absolute;
+    bottom: 13px;
     margin: 15px auto;
     width: 90%;
 }

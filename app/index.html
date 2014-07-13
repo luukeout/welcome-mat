@@ -85,18 +85,20 @@
         <script type="text/template" class="tiles-view-template">
 
             <div class="pic-box">
+                <div class="got-it">You Got It!</div>
                 <img src=<%= this.model.pic %>>
+                <div class="home-price">
+                $<%= this.model.price %>
+                </div>
             </div>
 
-            <div class="home-price">
-                $<%= this.model.price %>
-            </div>
+            <div class="play-again">Play Again</div>
 
             <div class="sorry">
                 Sorry. What&#39s Your Next Guess?
             </div>
 
-            <div class="play-again">play again</div>
+            
 
             <div class="icon-box">
                 <img src=<%= this.model.bedrooms %>>
@@ -107,7 +109,7 @@
                 <img src="bath-two-half.png">
             </div>
 
-            <div class="house-box">
+            <div class="icon-box">
                 <img src="house.png">
                 <div class="sqft"><%= this.model.sqft %> Square Feet</div>
             </div>
