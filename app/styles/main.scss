@@ -64,11 +64,15 @@ body {
 .welcome {
     font-family: 'Kaushan Script', cursive;
     margin: 0 auto;
-    padding: 25px;
+    padding: 22px 25px 25px 25px;
     text-align: center;
     line-height: 57px;
     font-size: 3em;
     color: #008CD8;
+}
+
+.space {
+    height: 10px;
 }
 
 .button {

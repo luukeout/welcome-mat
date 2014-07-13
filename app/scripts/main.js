@@ -83,12 +83,12 @@ function parseXml(xml){
   	sqft:      sqft,
   	lotSize:   lotSize,
   });
-  var imageOutput = []
-  function convert(num){
-  	for(var ii=num; num>0; num--){ 
-	  imageOutput.push(num)
-	} 
-  }
+//   var imageOutput = []
+//   function convert(num){
+//   	for(var ii=num; num>0; num--){ 
+// 	  imageOutput.push(num)
+// 	} 
+//   }
 
 //   convert(bedrooms)
 // console.log(imageOutput)
@@ -101,8 +101,8 @@ function parseXml(xml){
 //   	})
 //   }
   
-  var bedrooms = beds(imgSource)
-console.log(bedrooms)
+//   var bedrooms = beds(imgSource)
+// console.log(bedrooms)
 
   // Push Prices Into An Empty Array
   window.housePrices.push(home.attributes.price)

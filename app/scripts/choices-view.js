@@ -47,22 +47,20 @@ var SelectView = Backbone.View.extend({
 		this.$el.html(this.template());
 	},
 
-	getArray: function(){
-		if ($('#price').val() === '0') {
-			alert('Please Choose a Home Value.')
-			} else  
-				 if ($('#price').val() === '100') {
+	getArray: function(){  
+		if ($('.one-hun').val() === '100') {
 					window.shuffledList = _.shuffle(oneHundred)
 						getHouse(oneHundred)
 				} else 
-					 if ($('#price').val() === '150') {
+					 if ($('.one-fif').val() === '150') {
 						window.shuffledList = _.shuffle(oneFifty)
 							getHouse(oneFifty)
 					} else 
-						 if ($('#price').val() === '200') {
+						 if ($('.two-hun').val() === '200') {
 							window.shuffledList = _.shuffle(twoHundred)
 								getHouse(twoHundred)
 					}
+				 	
 	},
 });
 
