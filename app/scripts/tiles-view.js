@@ -1,6 +1,26 @@
 "use strict";
 
 //////////////////////////////////////////////////////////
+////// GamePrice Constructor
+////////////////////////////////////////////////////////
+var GamePrice = Backbone.View.extend({
+
+	className: 'match-price',
+
+	template: _.template($('.match-price-template').text()),
+
+	initialize: function() {
+		$('.price-box').append(this.el);
+		this.render();
+	},
+
+	render: function() {
+		// console.log(this.model)
+		this.$el.html(this.template(this.model.attributes));
+	},
+});
+
+//////////////////////////////////////////////////////////
 ////// TilesView Constructor
 ////////////////////////////////////////////////////////
 var TilesView = Backbone.View.extend({
@@ -47,36 +67,28 @@ var TilesView = Backbone.View.extend({
 					this.$('.sorry').show()
 					this.$('.play-again').hide()
 				}
-
-				// else
-				// 	if (this.model == randomHome.attributes) {
-				// 	this.$el.css('background', 'rgb(26, 248, 150)')
-				// 	$('.home-price').show()
-				// 	// $('.sorry').show()
-				// 	$('.sorry').replaceWith('You Got It!').show()
-				// }
 	},
-
 });
 
 //////////////////////////////////////////////////////////
-////// GamePrice Constructor
+////// BedView Constructor
 ////////////////////////////////////////////////////////
-var GamePrice = Backbone.View.extend({
+// var Bed = Backbone.View.extend({
 
-	className: 'match-price',
+// 	className: 'bed',
 
-	template: _.template($('.match-price-template').text()),
+// 	template: _.template($('.bed-view-template').text()),
 
-	initialize: function() {
-		$('.price-box').append(this.el);
-		this.render();
-	},
+// 	initialize: function() {
+// 		$('.bed-box').append(this.el);
+// 		this.render();
+// 	},
 
-	render: function() {
-		// console.log(this.model)
-		this.$el.html(this.template(this.model.attributes));
-	},
-});
+// 	render: function() {
+// 		// console.log(this.model)
+// 		this.$el.html(this.template(this.model.attributes));
+// 	},
+// });
+
 
 // var renderedTemplate = this.template(this.model.attributes)

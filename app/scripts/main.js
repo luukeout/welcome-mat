@@ -83,25 +83,26 @@ function parseXml(xml){
   	sqft:      sqft,
   	lotSize:   lotSize,
   });
-//   var imageOutput = []
-//   function convert(num){
-//   	for(var ii=num; num>0; num--){ 
-// 	  imageOutput.push(num)
-// 	} 
-//   }
-
-//   convert(bedrooms)
-// console.log(imageOutput)
+  var imageOutput = []
+  function convert(num){
+  	for(var ii=num; num>0; num--){ 
+	  imageOutput.push(num)
+	} 
+  }
+  convert(bedrooms)
+console.log(imageOutput)
 //   function beds(){
 //   	imageOutput.map(function(''){
 //   		num = ''
-  		
+  	imageOutput.forEach(function(){
+  		new Bed({imgSource})
+  	})	
   	
   	
 //   	})
 //   }
   
-//   var bedrooms = beds(imgSource)
+  // var bedrooms = beds(imgSource)
 // console.log(bedrooms)
 
   // Push Prices Into An Empty Array
