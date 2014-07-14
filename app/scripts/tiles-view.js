@@ -41,6 +41,9 @@ var TilesView = Backbone.View.extend({
 		$('.home-price').hide()
 		$('.play-again').hide()
 		$('.sorry').hide()
+		var bedrooms = this.model.bedrooms
+		console.log(bedrooms)
+		this.beds(bedrooms)
 	},
 
 	render: function() {
@@ -68,7 +71,26 @@ var TilesView = Backbone.View.extend({
 					this.$('.play-again').hide()
 				}
 	},
+
+	beds: function(bedrooms){
+		var data = [];
+		var length = bedrooms; // user defined length
+
+		for(var i = 0; i < length; i++) {
+		    data.push('number');
+		}
+		// console.log(data)
+		// console.log(this.$el)
+		var that = this
+		data.forEach(function(cool){
+			// console.log(that.$el)
+			that.$('.bed-box').append('<img src="bed-darker.png">')
+		})
+		
+	}
 });
+
+// 
 
 //////////////////////////////////////////////////////////
 ////// BedView Constructor

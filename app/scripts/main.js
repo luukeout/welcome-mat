@@ -71,7 +71,7 @@ function parseXml(xml){
 //   imageOutput = imageOutput + 1;
 // } 
 // return imageOutput;
-  var imgSource = 'http://s14.postimg.org/i8n30zta5/bed_darker.png'
+  // var imgSource = 'http://s14.postimg.org/i8n30zta5/bed_darker.png'
 
   // Add API Data To A Collection As An Object
   var home = properties.add({
@@ -83,14 +83,14 @@ function parseXml(xml){
   	sqft:      sqft,
   	lotSize:   lotSize,
   });
-  var imageOutput = []
-  function convert(num){
-  	for(var ii=num; num>0; num--){ 
-	  imageOutput.push(num)
-	} 
-  }
-  convert(bedrooms)
-console.log(imageOutput)
+ //  var imageOutput = []
+ //  function convert(num){
+ //  	for(var ii=num; num>0; num--){ 
+	//   imageOutput.push(num)
+	// } 
+ //  }
+ //  convert(bedrooms)
+// console.log(imageOutput)
 //   function beds(){
 //   	imageOutput.map(function(''){
 //   		num = ''
