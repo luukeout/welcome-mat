@@ -42,8 +42,12 @@ var TilesView = Backbone.View.extend({
 		$('.play-again').hide()
 		$('.sorry').hide()
 		var bedrooms = this.model.bedrooms
-		console.log(bedrooms)
+		// console.log(bedrooms)
 		this.beds(bedrooms)
+		var bathrooms = this.model.bathrooms
+		console.log(bathrooms)
+		this.baths(bathrooms)
+
 	},
 
 	render: function() {
@@ -87,10 +91,39 @@ var TilesView = Backbone.View.extend({
 			that.$('.bed-box').append('<img src="bed-darker.png">')
 		})
 		
-	}
+	},
+
+	baths: function(bathrooms){
+		var bathArray = [];
+
+		if (bathrooms % 1 == 0) {
+			for (var i = 0; i < bathrooms; i++) {
+				bathArray.push('number');
+				}
+
+				console.log(bathArray)
+				var that = this
+				bathArray.forEach(function(){
+				that.$('.bath-box').append('<img src="bath-two.png">')
+				})
+		} else {
+				for (var i = 1; i < bathrooms; i++) {
+				bathArray.push('number');
+				}
+
+				console.log(bathArray)
+				var that = this
+				bathArray.forEach(function(){
+				that.$('.bath-box').append('<img src="bath-two.png">')
+				})
+				that.$('.bath-box').append('<img src="bath-two-half.png">')
+			}
+	},
 });
 
-// 
+// var isEven = function(number){
+//      (number % 2 == 0) ? true : false;
+// };
 
 //////////////////////////////////////////////////////////
 ////// BedView Constructor
