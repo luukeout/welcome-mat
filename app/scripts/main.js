@@ -94,9 +94,9 @@ console.log(imageOutput)
 //   function beds(){
 //   	imageOutput.map(function(''){
 //   		num = ''
-  	imageOutput.forEach(function(){
-  		new Bed({imgSource})
-  	})	
+  	// imageOutput.forEach(function(){
+  	// 	new Bed({imgSource})
+  	// })	
   	
   	
 //   	})

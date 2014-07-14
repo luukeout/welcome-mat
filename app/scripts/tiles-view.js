@@ -49,10 +49,10 @@ var TilesView = Backbone.View.extend({
 
 	matching: function() {
 		if (this.model == randomHome.attributes) {
-			this.$el.css('background', 'rgb(26, 248, 150)')
-			$('.home-price').slideUp('slow')
-			$('.home-price').show()
-			this.$('.got-it').show()
+			this.$el.css('background', 'rgb(17, 177, 107)')
+			$('.home-price').slideUp()
+			$('.home-price').show('slow')
+			this.$('.got-it').slideDown('slow').show()
 			this.$('.play-again').show()
 			$('.play-again').click(function(){
 				router.navigate("price", {trigger: true})
