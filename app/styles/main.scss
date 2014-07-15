@@ -2,7 +2,7 @@
 // endbower
 
 body {
-    // position: fixed;
+    // position: relative;
     // z-index: 1;
     margin: 0;
     padding: 0;
@@ -14,6 +14,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     // line-height: 1.4;
     // color: #333;
+    height: 840px;  
 }
 
 .browsehappy {
@@ -47,6 +48,14 @@ body {
     font-size: 2.5em;
     color: white;
     line-height: 80px;
+}
+
+.brand {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
 }
 
 ////////////////////////////////////////////////
@@ -224,6 +233,9 @@ body {
     width: 90%;
     text-align: center;
     border-bottom: 2px solid #6c6c6c;
+        img {
+            margin: 0px 12px 0px 13px;
+        }
 }
 
 .bath-box {
@@ -233,6 +245,9 @@ body {
     width: 90%;
     text-align: center;
     border-bottom: 2px solid #6c6c6c;
+        img {
+            margin: 0px 12px -3px 13px;
+        }
 }
 
 .house-box {

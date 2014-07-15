@@ -10,7 +10,7 @@ var GamePrice = Backbone.View.extend({
 	template: _.template($('.match-price-template').text()),
 
 	initialize: function() {
-		$('.price-box').append(this.el);
+		$('.price-box').html(this.el);
 		this.render();
 	},
 
@@ -63,7 +63,7 @@ var TilesView = Backbone.View.extend({
 			this.$('.play-again').show()
 			$('.play-again').click(function(){
 				router.navigate("price", {trigger: true})
-				location.reload()
+				// location.reload()
 				})
 			}
 			

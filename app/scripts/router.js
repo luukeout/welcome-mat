@@ -19,6 +19,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	priceScreen: function() {
+		// .once(location.reload())
 		$('.game-header').hide();
 		$('.tile-container').hide();
 		$('.start-box').html('');
@@ -27,15 +28,18 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	gameScreen: function() {
+		window.properties.reset();
 		window.housePrices=[]
 		window.houseList.forEach(function(property){
 			$.when(apiCall(property)).done(($('.game-header, .tile-container').is( ":hidden" )) ? $('.game-header, .tile-container').slideDown('slow') : $('.game-header, .tile-container').hide())
-				
+
 		})
 
 		$('.start-box').hide();
 		$('.tile-container').html('');
 	},
+
+
 });
 
 

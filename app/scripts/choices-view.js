@@ -47,41 +47,20 @@ var SelectView = Backbone.View.extend({
 		this.$el.html(this.template());
 	},
 
-	getArray: function(){  
-		$('#one-hun').click(function(){window.shuffledList = _.shuffle(oneHundred)
-			getHouse(oneHundred)})
-					
-		$('#one-fif').click(function(){window.shuffledList = _.shuffle(oneFifty)
-			getHouse(oneFifty)})
-				 
-		$('#two-hun').click(function(){window.shuffledList = _.shuffle(twoHundred)
-			getHouse(twoHundred)})
+	getArray: function(evt){
 
-					
-			 
+		if (evt.currentTarget.id === "one-hun") {
+				window.shuffledList = _.shuffle(oneHundred)
+				getHouse(oneHundred)
+			} else if (evt.currentTarget.id === "one-fif") {
+						window.shuffledList = _.shuffle(oneFifty)
+						getHouse(oneFifty)
+					} else {
+							window.shuffledList = _.shuffle(twoHundred)
+							getHouse(twoHundred)
+						}
 	},
 });
 						
 				  
-							
-// if ($('#one-hun')) {
-// 				window.shuffledList = _.shuffle(oneHundred)
-// 					getHouse(oneHundred)
-// 			} else if ($('#one-fif')) {
-				   
-// 				 	window.shuffledList = _.shuffle(oneFifty)
-// 						getHouse(oneFifty)
-// 				 } else if ($('#two-hun')) {
-// 				 	  //  
-// 				 		window.shuffledList = _.shuffle(twoHundred)
-// 							getHouse(twoHundred)
-// 				 	}					
-				 	
-
-
-
-
-
-
-
 
