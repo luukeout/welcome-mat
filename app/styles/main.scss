@@ -258,14 +258,20 @@ body {
     position: absolute;
     bottom: 5px;
     width: 100%;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: .35em;
 }
 
 .zillow-text {
     margin: 0 auto;
     width: 380px;
     text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: .4em;
+        a {
+            color: #0183CA;
+                &:hover {
+                    color: #b75f14;
+                }
+        }
 }
 
 

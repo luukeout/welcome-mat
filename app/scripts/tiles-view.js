@@ -98,7 +98,7 @@ var TilesView = Backbone.View.extend({
 				bathArray.push('number');
 				}
 
-				console.log(bathArray)
+				// console.log(bathArray)
 				var that = this
 				bathArray.forEach(function(){
 				that.$('.bath-box').append('<img src="bath-two.png">')
@@ -108,7 +108,7 @@ var TilesView = Backbone.View.extend({
 				bathArray.push('number');
 				}
 
-				console.log(bathArray)
+				// console.log(bathArray)
 				var that = this
 				bathArray.forEach(function(){
 				that.$('.bath-box').append('<img src="bath-two.png">')

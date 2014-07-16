@@ -1,19 +1,19 @@
 
 
+// Use This For Retrieving ZPID'S
+// 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=1+Hiawatha+Dr&citystatezip=Greenville%2C+SC'
 
-// 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=105+Devonshire+Ln&citystatezip=Greenville%2C+SC'
-
-// 105 Devonshire Ln, Greenville, SC
+// 1 Hiawatha Dr, Greenville, SC
 
 
 //////////////////////////////////////////////////////////
 ////// House ID Arrays
 ////////////////////////////////////////////////////////
-var oneHundred  = [11085227, 80963476, 11072468, 11014125, 82540495, 11022580, 11079201];
+var oneHundred  = [11085227, 11072468, 82540495, 11022580, 11079201, 11050639];
 
-var oneFifty    = [11085315, 2128039685, 11002304, 10990739, 11050615, 11002769];
+var oneFifty    = [11085315, 2128039685, 11002304, 10990739, 11050615, 67591730, 11025069, 11049372];
 
-var twoHundred  = [89804034, 96458822, 71251078, 11025731, 11014874, 11001058, 11045041, 114444926, 10991859, 11011984, 63663043, 11078620, 11002172, 11055387];
+var twoHundred  = [89804034, 96458822, 71251078, 11025731, 11014874, 11001058, 11045041, 114444926, 10991859, 11011984, 63663043, 11078620, 11002172, 11055387, 11082638];
 
 // Instantiate New Collection
 var properties = new PropertiesCollection();
