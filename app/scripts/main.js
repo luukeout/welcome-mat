@@ -50,16 +50,17 @@ function getHouse (arrayName) {
 ////// Parse XML Function
 ////////////////////////////////////////////////////////
 function parseXml(xml){
-  var zpid      = $(xml).find("zpid").text()
-  var pic       = $(xml).find("url").first().text() 
-  var price     = $(xml).find("price").text()
-  var bedrooms  = $(xml).find("bedrooms").text()
-  var bathrooms = $(xml).find("bathrooms").text()
-  var sqft      = $(xml).find("finishedSqFt").text()
-  var lotSize   = $(xml).find("lotSizeSqFt").text()
-  var street	= $(xml).find("street").text()
-  var city      = $(xml).find("city").text()
-  var state     = $(xml).find("state").text()
+  var zpid          = $(xml).find("zpid").text()
+  var pic           = $(xml).find("url").first().text() 
+  var price         = $(xml).find("price").text()
+  var bedrooms      = $(xml).find("bedrooms").text()
+  var bathrooms     = $(xml).find("bathrooms").text()
+  var sqft          = $(xml).find("finishedSqFt").text()
+  var lotSize       = $(xml).find("lotSizeSqFt").text()
+  var street	    = $(xml).find("street").text()
+  var city          = $(xml).find("city").text()
+  var state         = $(xml).find("state").text()
+  var homeDetails   = $(xml).find("homeDetails").text()
 
   // Add Commas to Numbers
   var price   = numeral(price).format('0,0')
@@ -68,16 +69,17 @@ function parseXml(xml){
 
   // Add API Data To A Collection As An Object
   var home = properties.add({
-  	zpid:      zpid,
-  	pic:       pic, 
-  	price:     price, 
-  	bedrooms:  bedrooms, 
-  	bathrooms: bathrooms,
-  	sqft:      sqft,
-  	lotSize:   lotSize,
-  	street:    street,
-  	city:      city,
-  	state:     state,
+  	zpid:          zpid,
+  	pic:           pic, 
+  	price:         price, 
+  	bedrooms:      bedrooms, 
+  	bathrooms:     bathrooms,
+  	sqft:          sqft,
+  	lotSize:       lotSize,
+  	street:        street,
+  	city:          city,
+  	state:         state,
+  	homeDetails:   homeDetails,
   });
 
   // Push Prices Into An Empty Array

@@ -40,7 +40,7 @@
 
         <div class="tile-container"></div>
 
-        <div class="brand"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_150x40_rounded.gif" width="150" height="40" alt="Zillow Real Estate Search" />
+        <div class="brand"><a href="http://www.zillow.com/"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_150x40_rounded.gif" width="150" height="40" alt="Zillow Real Estate Search" /></a>
         </div>
 
         <div class="disclaimer">© Zillow, Inc., 2006-2014. Use is subject to <a href="http://www.zillow.com/corp/Terms.htm">Terms of Use</a></div>
@@ -112,6 +112,11 @@
             <div class="lot-box">
                 <img src="fence.png">
                 <div class="sqft"><%= this.model.lotSize %> Lot Size sq.ft.</div>
+            </div>
+
+            <div class="zillow">
+                <div class="zillow-text"><a href="<%=this.model.homeDetails%>">See more details for <%=this  .model.street%>, <%=this.model.city%>, <%=this.model.state%> on Zillow</a>
+                </div>
             </div>
 
         </script>        
