@@ -46,8 +46,6 @@ function getHouse (arrayName) {
 	router.navigate("game", {trigger: true})
 }
 
-
-
 //////////////////////////////////////////////////////////
 ////// Parse XML Function
 ////////////////////////////////////////////////////////
@@ -59,19 +57,14 @@ function parseXml(xml){
   var bathrooms = $(xml).find("bathrooms").text()
   var sqft      = $(xml).find("finishedSqFt").text()
   var lotSize   = $(xml).find("lotSizeSqFt").text()
+  var street	= $(xml).find("street").text()
+  var city      = $(xml).find("city").text()
+  var state     = $(xml).find("state").text()
 
   // Add Commas to Numbers
   var price   = numeral(price).format('0,0')
   var sqft    = numeral(sqft).format('0,0')
   var lotSize = numeral(lotSize).format('0,0')
-
-//   bedrooms = Number_of_bedrooms_returned_from_api;
-// var imgOutput = [];
-// for(var ii=num;num>0;num--){ 
-//   imageOutput = imageOutput + 1;
-// } 
-// return imageOutput;
-  // var imgSource = 'http://s14.postimg.org/i8n30zta5/bed_darker.png'
 
   // Add API Data To A Collection As An Object
   var home = properties.add({
@@ -82,28 +75,10 @@ function parseXml(xml){
   	bathrooms: bathrooms,
   	sqft:      sqft,
   	lotSize:   lotSize,
+  	street:    street,
+  	city:      city,
+  	state:     state,
   });
- //  var imageOutput = []
- //  function convert(num){
- //  	for(var ii=num; num>0; num--){ 
-	//   imageOutput.push(num)
-	// } 
- //  }
- //  convert(bedrooms)
-// console.log(imageOutput)
-//   function beds(){
-//   	imageOutput.map(function(''){
-//   		num = ''
-  	// imageOutput.forEach(function(){
-  	// 	new Bed({imgSource})
-  	// })	
-  	
-  	
-//   	})
-//   }
-  
-  // var bedrooms = beds(imgSource)
-// console.log(bedrooms)
 
   // Push Prices Into An Empty Array
   window.housePrices.push(home.attributes.price)
@@ -112,8 +87,6 @@ function parseXml(xml){
   // Instantiate New TilesView
   var view  = new TilesView({model: home.attributes})
 }
-
-
 
 //////////////////////////////////////////////////////////
 ////// API Call
@@ -126,9 +99,5 @@ function apiCall(zpid) {
     success: parseXml
 	})
 }
-
-
-
-
 
 

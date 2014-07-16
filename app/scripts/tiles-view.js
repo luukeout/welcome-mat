@@ -28,7 +28,6 @@ var TilesView = Backbone.View.extend({
 	className: 'property-box',
 
 	template: _.template($('.tiles-view-template').text()),
-	// bedTemplate: _.template($('.bed-Template').text()),
 
 	events: {
 		"click": "matching",
@@ -47,7 +46,6 @@ var TilesView = Backbone.View.extend({
 		var bathrooms = this.model.bathrooms
 		console.log(bathrooms)
 		this.baths(bathrooms)
-
 	},
 
 	render: function() {
@@ -89,8 +87,7 @@ var TilesView = Backbone.View.extend({
 		data.forEach(function(cool){
 			// console.log(that.$el)
 			that.$('.bed-box').append('<img src="bed-darker.png">')
-		})
-		
+		})		
 	},
 
 	baths: function(bathrooms){
@@ -121,29 +118,3 @@ var TilesView = Backbone.View.extend({
 	},
 });
 
-// var isEven = function(number){
-//      (number % 2 == 0) ? true : false;
-// };
-
-//////////////////////////////////////////////////////////
-////// BedView Constructor
-////////////////////////////////////////////////////////
-// var Bed = Backbone.View.extend({
-
-// 	className: 'bed',
-
-// 	template: _.template($('.bed-view-template').text()),
-
-// 	initialize: function() {
-// 		$('.bed-box').append(this.el);
-// 		this.render();
-// 	},
-
-// 	render: function() {
-// 		// console.log(this.model)
-// 		this.$el.html(this.template(this.model.attributes));
-// 	},
-// });
-
-
-// var renderedTemplate = this.template(this.model.attributes)

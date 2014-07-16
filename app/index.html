@@ -35,11 +35,15 @@
             <div class="question">Can You Guess Which House Is:</div>
             <div class="price-box"></div>
         </div>
-        <div class="brand"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_150x40_rounded.gif" width="150" height="40" alt="Zillow Real Estate Search" /></div>
 
         <div class="start-box"></div>
 
         <div class="tile-container"></div>
+
+        <div class="brand"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_150x40_rounded.gif" width="150" height="40" alt="Zillow Real Estate Search" />
+        </div>
+
+        <div class="disclaimer">© Zillow, Inc., 2006-2014. Use is subject to <a href="http://www.zillow.com/corp/Terms.htm">Terms of Use</a></div>
 <!-- ////////////////////////////////////////////// -->
 <!-- Start Box Template -->
 <!-- //////////////////////////////////////////// -->
@@ -47,7 +51,6 @@
             
             <div class="welcome">
                 <div>Welcome<br> to<br> House Guessed!</div>
-                
             </div>
 
             <div class="space"></div>
@@ -63,22 +66,18 @@
 <!-- ////////////////////////////////////////////////// -->
         <script type="text/template" class="select-box-template">
                 
-            
-
             <div class="welcome">Choose a Price Range.</div>
 
             <div id="one-hun" class="button"><div class="amount">$100 K - $150 K</div></div>
             <div id="one-fif" class="button"><div class="amount">$150 K - $200 K</div></div>
             <div id="two-hun" class="button"><div class="amount">$200 K - $300 K</div></div>
 
-               
-
         </script>
 <!-- ////////////////////////////////////////////////////////// -->
 <!-- Game-Header Template -->
 <!-- ///////////////////////////////////////////////////////// -->
         <script type="text/template" class="match-price-template">
-        <div class="match-price">$<%= price %></div>
+            <div class="match-price">$<%= price %></div>
         </script>
 <!-- ////////////////////////////////////////////////////////// -->
 <!-- Tile View Template -->
@@ -87,9 +86,11 @@
 
             <div class="pic-box">
                 <div class="got-it">You Got It!</div>
+
                 <img src=<%= this.model.pic %>>
+
                 <div class="home-price">
-                $<%= this.model.price %>
+                    $<%= this.model.price %>
                 </div>
             </div>
 
@@ -99,18 +100,10 @@
                 Sorry. What&#39s Your Next Guess?
             </div>
 
-            
-            
             <div class="bed-box"></div>
                 
-            
-            
-
             <div class="bath-box"></div>
                 
-                
-            
-
             <div class="house-box">
                 <img src="house.png">
                 <div class="sqft"><%= this.model.sqft %> Square Feet</div>
@@ -121,17 +114,7 @@
                 <div class="sqft"><%= this.model.lotSize %> Lot Size sq.ft.</div>
             </div>
 
-        </script>
-
-        <!-- script type="text/template" class="bed-view-template">
-        /script> -->
-        <!-- <div class="button">
-                <p>GO!</p>
-            </div>  -->
-
-         
-
-        
+        </script>        
 <!-- ////////////////////////////////////////////////////////// -->
 <!-- End Template -->
 <!-- ///////////////////////////////////////////////////////// -->    
@@ -163,4 +146,3 @@
         <!-- endbuild -->
 </body>
 </html>
-<!-- http://www.threedogstl.com/wp-content/uploads/2013/12/dog-in-snow.jpg -->

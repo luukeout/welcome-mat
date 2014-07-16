@@ -2,19 +2,13 @@
 // endbower
 
 body {
-    // position: relative;
-    // z-index: 1;
     margin: 0;
     padding: 0;
     // background-image: url('http://www.thehomespun.com/wp-content/uploads/2012/08/one-side-of-house-early-august-1024x657.jpg');
     background-image: url('http://2.bp.blogspot.com/-ZziIeSCjOzs/UJaMZ1goYRI/AAAAAAAADOc/qA7ajYA2Ahw/s1600/wood-shake+siding+1.jpg');
-    // background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2012/03/weathered-shake-shingles-texture.jpg');
     // background-image: url('http://cdn.freshome.com/wp-content/uploads/2013/08/selling-your-home-cedar-shingle-home.jpg');
     background-size: cover;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    // line-height: 1.4;
-    // color: #333;
-    height: 840px;  
 }
 
 .browsehappy {
@@ -27,7 +21,7 @@ body {
 .game-header {
     margin: 0 auto;
     width: 960px;
-    height: 95px;
+    height: 87px;
     background-color: #0183CA;
     border-radius: 0px 0px 6px 6px;
 }
@@ -58,10 +52,15 @@ body {
     margin: 0 auto;
 }
 
+.disclaimer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
 ////////////////////////////////////////////////
 ///// Start Screen
 ///////////////////////////////////////////////
-
 .start-box {
     margin: 240px auto 0 auto;
     width: 500px;
@@ -89,7 +88,6 @@ body {
 
 .button {
     margin: 0 auto 5px;
-    // padding-left: 52px;
     width: 228px;
     height: 40px;
     font-family: 'Kaushan Script', cursive;
@@ -106,13 +104,11 @@ body {
             height: 30px;
         }
 }
-// #008cd8
+
 .button:hover {
     color: #0B5B86;
     background-color: #37B4F8;
-    // box-shadow: inset 0px 0px 77px 0px #ddd9d9;
 }
-
 
 .begin {
     display: inline-block;
@@ -127,48 +123,27 @@ body {
 ///////////////////////////////////////////////////
 /////Price Selector
 /////////////////////////////////////////////////
-
 .amount {
     width: 170px;
     margin: 0 auto;
     padding-top: 4px;
 }
-// .styled-select select {
-//     // display: inline-block;
-//    margin: 60px 140px;
-//    background: #008CD8;
-//    width: 230px;
-//    height: 75px;
-//    padding: 5px;
-//    font-family: 'Kaushan Script', cursive;
-//    font-size: 22px;
-//    text-indent: 15px;
-//    line-height: 1;
-//    color: white;
-//    border: 0;
-//    border-radius: 6px;
-//    cursor: pointer;
-//    -webkit-appearance: none;
-// }
 
 ////////////////////////////////////////
 ///// House Tiles
 ///////////////////////////////////////
-
 .property-box {
     position: relative;
     display: inline-block;
     vertical-align: top;
     width: 28%;
-    height: 655px;
-    margin: 2% 2.25% 2% 2.5%;
+    height: 650px;
+    margin: 1.5% 2.25% 2% 2.5%;
     background-color: rgba(189, 222, 240, 0.8);
     border-radius: 6px;
     font-family: 'Kaushan Script', cursive;
     font-size: 1.5em;
-    // text-align: center;
     cursor: pointer;
-    // box-shadow: 10px 10px 8px -4px #91b4c1;
         &:hover {
             background-color: rgba(189, 222, 240, 1);
         }
@@ -193,7 +168,6 @@ body {
     width: 360px;
     height: 270px;
     min-height: 230px;
-    // border-radius: 6px;
         img {
             display: block;
             position: relative;
@@ -228,7 +202,7 @@ body {
 
 .bed-box {
     position: absolute;
-    bottom: 207px;
+    bottom: 213px;
     margin: 0px 20px 30px;
     width: 90%;
     text-align: center;
@@ -240,7 +214,7 @@ body {
 
 .bath-box {
     position: absolute;
-    bottom: 117px;
+    bottom: 126px;
     margin: 0px 20px 30px;
     width: 90%;
     text-align: center;
@@ -252,7 +226,7 @@ body {
 
 .house-box {
     position: absolute;
-    bottom: 39px;
+    bottom: 65px;
     margin: 0px 20px 30px;
     width: 90%;
     font-family: 'Merriweather Sans', sans-serif;
@@ -265,7 +239,7 @@ body {
 
 .lot-box {
     position: absolute;
-    bottom: -5px;
+    bottom: 18px;
     margin: 15px 20px;
     width: 90%;
     font-family: 'Merriweather Sans', sans-serif;
@@ -279,32 +253,5 @@ body {
     display: inline-block;
     margin: 0px 0px 8px 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -12,8 +12,6 @@ var Property = Backbone.Model.extend({
 		sqft        :  "",
 		lotSize     :  "",
 	},
-
-
 });
 
 ///////////////////////////////////////////////////////

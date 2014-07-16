@@ -24,7 +24,6 @@ var StartView = Backbone.View.extend({
 		
 		router.navigate('price', {trigger: true});
 	},
-
 });
 
 //////////////////////////////////////////////////////////
