@@ -9,7 +9,7 @@
 //////////////////////////////////////////////////////////
 ////// House ID Arrays
 ////////////////////////////////////////////////////////
-var oneHundred  = [11085227, 11072468, 82540495, 11022580, 11079201, 11050639];
+var oneHundred  = [11085227, 11072468, 11022580, 11079201, 11050639];
 
 var oneFifty    = [11085315, 2128039685, 11002304, 10990739, 11050615, 67591730, 11025069, 11049372];
 
@@ -40,7 +40,8 @@ function getHouse (arrayName) {
 
 	for (var i=0; i < 3; i++) {
 		houseList[i] = shuffledList.pop()
-		console.log(houseList)
+		//Use this console log to find houses that have gone off market
+		// console.log(houseList)
 	}
 
 	router.navigate("game", {trigger: true})

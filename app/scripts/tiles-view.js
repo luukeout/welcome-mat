@@ -41,10 +41,8 @@ var TilesView = Backbone.View.extend({
 		$('.play-again').hide()
 		$('.sorry').hide()
 		var bedrooms = this.model.bedrooms
-		// console.log(bedrooms)
 		this.beds(bedrooms)
 		var bathrooms = this.model.bathrooms
-		console.log(bathrooms)
 		this.baths(bathrooms)
 	},
 
@@ -76,7 +74,7 @@ var TilesView = Backbone.View.extend({
 
 	beds: function(bedrooms){
 		var data = [];
-		var length = bedrooms; // user defined length
+		var length = bedrooms; 
 
 		for(var i = 0; i < length; i++) {
 		    data.push('number');
