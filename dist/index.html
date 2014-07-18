@@ -1,8 +1,54 @@
-<!DOCTYPE html><html class=no-js><head><meta charset=utf-8><title>welcome mat</title><meta name=description content=""><meta name=viewport content="width=device-width"><link rel="shortcut icon" href=/6df2b309.favicon.ico><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/db4badba.main.css><script src=scripts/vendor/2b345fec.modernizr.js></script><body><!--[if lt IE 10]>
+<!DOCTYPE html><html class=no-js><head><meta charset=utf-8><title>welcome mat</title><meta name=description content=""><meta name=viewport content="width=device-width"><link rel="shortcut icon" href=/6df2b309.favicon.ico><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/5dbd2b93.main.css><script src=scripts/vendor/1cb556bb.modernizr.js></script><body><!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]--><div class=hero-unit><h1>'Allo, 'Allo!</h1><p>You now have</p><ul><li>HTML5 Boilerplate</li><li>Sass</li><li>Modernizr</li></ul></div><script src=scripts/4776dee8.vendor.js></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        <![endif]--><!-- ///////////////////////////////////////////// --><!-- ///////////Divs --><!-- /////////////////////////////////////////// --><div class=game-header><div class=question>Can You Guess Which House Is:</div><div class=price-box></div></div><div class=start-box></div><div class=tile-container></div><div class=brand><a href="http://www.zillow.com/"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_150x40_rounded.gif" width=150 height=40 alt="Zillow Real Estate Search"></a></div><div class=disclaimer>Data & Images © Zillow, Inc., 2006-2014. Use is subject to <a href=http://www.zillow.com/corp/Terms.htm>Terms of Use</a></div><!-- ////////////////////////////////////////////// --><!-- Start Box Template --><!-- //////////////////////////////////////////// --><script type=text/template class=start-box-template><div class="welcome">
+                <div>Welcome<br> to<br> House Guessed!</div>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="button">
+                <img src="images/e4d70904.go-home.png">
+                <div class="begin">Begin!</div>
+            </div></script><!-- /////////////////////////////////////////////////// --><!-- Select Box Template --><!-- ////////////////////////////////////////////////// --><script type=text/template class=select-box-template><div class="welcome">Choose a Price Range.</div>
+
+            <div id="one-hun" class="button"><div class="amount">$100 K - $150 K</div></div>
+            <div id="one-fif" class="button"><div class="amount">$150 K - $200 K</div></div>
+            <div id="two-hun" class="button"><div class="amount">$200 K - $300 K</div></div></script><!-- ////////////////////////////////////////////////////////// --><!-- Game-Header Template --><!-- ///////////////////////////////////////////////////////// --><script type=text/template class=match-price-template><div class="match-price">$<%= price %></div></script><!-- ////////////////////////////////////////////////////////// --><!-- Tile View Template --><!-- ///////////////////////////////////////////////////////// --><script type=text/template class=tiles-view-template><div class="pic-box">
+                <div class="got-it">You Got It!</div>
+
+                <img src=<%= this.model.pic %>>
+
+                <div class="home-price">
+                    $<%= this.model.price %>
+                </div>
+            </div>
+
+            <div class="play-again button">Play Again</div>
+
+            <div class="sorry">
+                Sorry. What&#39s Your Next Guess?
+            </div>
+
+            <div class="bed-box"></div>
+                
+            <div class="bath-box"></div>
+                
+            <div class="house-box">
+                <img src="10c54137.house.png">
+                <div class="sqft"><%= this.model.sqft %> Square Feet</div>
+            </div>
+
+            <div class="lot-box">
+                <img src="6b6f2444.fence.png">
+                <div class="sqft"><%= this.model.lotSize %> Lot Size sq.ft.</div>
+            </div>
+
+            <div class="zillow">
+                <div class="zillow-text"><a href="<%=this.model.homeDetails%>">See more details for <br> <%=this.model.street%>, <%=this.model.city%>, <%=this.model.state%> on Zillow</a>
+                </div>
+            </div></script><!-- ////////////////////////////////////////////////////////// --><!-- End Template --><!-- ///////////////////////////////////////////////////////// --><script src=scripts/e0c99382.vendor.js></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/b6c3df09.main.js></script>
+            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/7118fd28.main.js></script>
