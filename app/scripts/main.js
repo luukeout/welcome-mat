@@ -1,19 +1,19 @@
 
 
 // Use This For Retrieving ZPID'S
-// 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=1+Hiawatha+Dr&citystatezip=Greenville%2C+SC'
+// 'http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=X1-ZWz1b5m7iasgln_90hcq&address=307+Mcdonald+St&citystatezip=Greenville%2C+SC'
 
-// 1 Hiawatha Dr, Greenville, SC
+// 307 Mcdonald St, Greenville, SC  
 
 
 //////////////////////////////////////////////////////////
 ////// House ID Arrays
 ////////////////////////////////////////////////////////
-var oneHundred  = [11085227, 11072468, 11022580, 11079201, 11050639];
+var oneHundred  = [11072468, 11022580, 11079201, 11050639, 10992630, 80959177];
 
-var oneFifty    = [11085315, 2128039685, 11002304, 10990739, 11050615, 67591730, 11025069, 11049372];
+var oneFifty    = [11085315, 2128039685, 11002304, 67591730, 11047979, 80955319]; 
 
-var twoHundred  = [89804034, 96458822, 71251078, 11025731, 11014874, 11001058, 11045041, 114444926, 10991859, 11011984, 63663043, 11078620, 11002172, 11055387, 11082638];
+var twoHundred  = [96458822, 71251078, 11001058, 114444926, 10991859, 63663043, 11078620, 11002172, 11055387, 11049386];
 
 // Instantiate New Collection
 var properties = new PropertiesCollection();
@@ -41,7 +41,7 @@ function getHouse (arrayName) {
 	for (var i=0; i < 3; i++) {
 		houseList[i] = shuffledList.pop()
 		//Use this console log to find houses that have gone off market
-		// console.log(houseList)
+		console.log(houseList)
 	}
 
 	router.navigate("game", {trigger: true})
